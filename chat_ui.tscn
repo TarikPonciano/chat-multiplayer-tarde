@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8vn6b4b6auim"]
+
+[ext_resource type="Script" path="res://chat_ui.gd" id="1_50xmr"]
+
+[node name="ChatUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_50xmr")
+
+[node name="CaixaParticipantes" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 176.0
+offset_bottom = 448.0
+editable = false
+wrap_mode = 1
+
+[node name="CaixaChat" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 24.0
+offset_right = 1128.0
+offset_bottom = 448.0
+editable = false
+wrap_mode = 1
+
+[node name="CampoNomeUsuario" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 472.0
+offset_right = 248.0
+offset_bottom = 520.0
+placeholder_text = "Digite seu nome de Usuário"
+
+[node name="CampoMensagem" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 472.0
+offset_right = 1024.0
+offset_bottom = 520.0
+placeholder_text = "Digite aqui..."
+
+[node name="CampoNumeroChat" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -208.0
+offset_top = -80.0
+offset_right = -8.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+placeholder_text = "Digite o número do Chat"
+
+[node name="BotaoEnviar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1048.0
+offset_top = 480.0
+offset_right = 1128.0
+offset_bottom = 512.0
+text = "Enviar"
+
+[node name="BotaoJoin" type="Button" parent="."]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 568.0
+offset_right = 688.0
+offset_bottom = 616.0
+text = "Entrar"
+
+[node name="BotaoHost" type="Button" parent="."]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 568.0
+offset_right = 808.0
+offset_bottom = 615.0
+text = "Criar"
+
+[connection signal="pressed" from="BotaoEnviar" to="." method="enviar_mensagem"]
+[connection signal="pressed" from="BotaoJoin" to="." method="_on_botao_join_pressed"]
+[connection signal="pressed" from="BotaoHost" to="." method="_on_botao_host_pressed"]
