@@ -11,79 +11,72 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_50xmr")
 
-[node name="CaixaParticipantes" type="TextEdit" parent="."]
+[node name="ListaParticipantes" type="TextEdit" parent="."]
 layout_mode = 0
 offset_left = 24.0
 offset_top = 24.0
-offset_right = 176.0
-offset_bottom = 448.0
+offset_right = 168.0
+offset_bottom = 456.0
 editable = false
-wrap_mode = 1
 
-[node name="CaixaChat" type="TextEdit" parent="."]
+[node name="CaixaMensagens" type="TextEdit" parent="."]
 layout_mode = 0
-offset_left = 200.0
+offset_left = 192.0
 offset_top = 24.0
 offset_right = 1128.0
-offset_bottom = 448.0
+offset_bottom = 456.0
 editable = false
 wrap_mode = 1
 
-[node name="CampoNomeUsuario" type="LineEdit" parent="."]
+[node name="CampoNome" type="LineEdit" parent="."]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 472.0
-offset_right = 248.0
-offset_bottom = 520.0
-placeholder_text = "Digite seu nome de Usuário"
+offset_top = 488.0
+offset_right = 168.0
+offset_bottom = 528.0
+placeholder_text = "Digite seu nome"
 
 [node name="CampoMensagem" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 472.0
-offset_right = 1024.0
-offset_bottom = 520.0
-placeholder_text = "Digite aqui..."
+offset_left = 192.0
+offset_top = 488.0
+offset_right = 1000.0
+offset_bottom = 528.0
+placeholder_text = "Digite sua mensagem"
 
-[node name="CampoNumeroChat" type="LineEdit" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -208.0
-offset_top = -80.0
-offset_right = -8.0
-offset_bottom = -33.0
-grow_horizontal = 2
-grow_vertical = 0
-placeholder_text = "Digite o número do Chat"
-
-[node name="BotaoEnviar" type="Button" parent="."]
+[node name="CampoSala" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = 1048.0
-offset_top = 480.0
-offset_right = 1128.0
-offset_bottom = 512.0
-text = "Enviar"
+offset_left = 640.0
+offset_top = 560.0
+offset_right = 768.0
+offset_bottom = 608.0
+placeholder_text = "Digite a Sala"
+editable = false
 
 [node name="BotaoJoin" type="Button" parent="."]
 layout_mode = 0
-offset_left = 592.0
-offset_top = 568.0
-offset_right = 688.0
-offset_bottom = 616.0
-text = "Entrar"
+offset_left = 792.0
+offset_top = 560.0
+offset_right = 856.0
+offset_bottom = 608.0
+disabled = true
+text = "Join"
 
 [node name="BotaoHost" type="Button" parent="."]
 layout_mode = 0
-offset_left = 712.0
-offset_top = 568.0
-offset_right = 808.0
-offset_bottom = 615.0
-text = "Criar"
+offset_left = 880.0
+offset_top = 560.0
+offset_right = 944.0
+offset_bottom = 608.0
+disabled = true
+text = "Host"
 
-[connection signal="pressed" from="BotaoEnviar" to="." method="enviar_mensagem"]
-[connection signal="pressed" from="BotaoJoin" to="." method="_on_botao_join_pressed"]
-[connection signal="pressed" from="BotaoHost" to="." method="_on_botao_host_pressed"]
+[node name="BotaoEnviar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 488.0
+offset_right = 1096.0
+offset_bottom = 528.0
+text = "Enviar"
+
+[connection signal="pressed" from="BotaoEnviar" to="." method="_on_botao_enviar_pressed"]
