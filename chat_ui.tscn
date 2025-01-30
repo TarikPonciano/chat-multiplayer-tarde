@@ -59,7 +59,6 @@ offset_left = 792.0
 offset_top = 560.0
 offset_right = 856.0
 offset_bottom = 608.0
-disabled = true
 text = "Join"
 
 [node name="BotaoHost" type="Button" parent="."]
@@ -68,7 +67,6 @@ offset_left = 880.0
 offset_top = 560.0
 offset_right = 944.0
 offset_bottom = 608.0
-disabled = true
 text = "Host"
 
 [node name="BotaoEnviar" type="Button" parent="."]
@@ -79,4 +77,5 @@ offset_right = 1096.0
 offset_bottom = 528.0
 text = "Enviar"
 
+[connection signal="pressed" from="BotaoHost" to="." method="_on_botao_host_pressed"]
 [connection signal="pressed" from="BotaoEnviar" to="." method="_on_botao_enviar_pressed"]
