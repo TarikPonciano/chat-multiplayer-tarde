@@ -41,7 +41,6 @@ func _on_botao_join_pressed() -> void:
 #call_remote > Apenas manda a informação
 @rpc("any_peer", "call_local","reliable") 
 func atualizar_chat(mensagem, nome):
-	print("Tentando enviar", nome, mensagem)
 	$CaixaMensagens.text += nome + ": " + mensagem + "\n"
 	
 	
