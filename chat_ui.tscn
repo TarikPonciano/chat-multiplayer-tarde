@@ -77,5 +77,6 @@ offset_right = 1096.0
 offset_bottom = 528.0
 text = "Enviar"
 
+[connection signal="pressed" from="BotaoJoin" to="." method="_on_botao_join_pressed"]
 [connection signal="pressed" from="BotaoHost" to="." method="_on_botao_host_pressed"]
 [connection signal="pressed" from="BotaoEnviar" to="." method="_on_botao_enviar_pressed"]
